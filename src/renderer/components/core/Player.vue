@@ -16,9 +16,11 @@ div(:class="$style.player")
         //- div(:class="$style.playBtn" @click='handleNext' title="音量")
           svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' height='100%' viewBox='0 0 291.063 291.064' space='preserve')
             use(xlink:href='#icon-sound')
+        //下一首
         div(:class="$style.playBtn" @click='handleNext' :title="$t('core.player.next')")
           svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' height='100%' viewBox='0 0 220.847 220.847' space='preserve')
             use(xlink:href='#icon-nextMusic')
+        //播放暂停
         div(:class="$style.playBtn" :title="isPlay ? $t('core.player.pause') : $t('core.player.play')" @click='togglePlay')
           svg(v-if="isPlay" version='1.1' xmlns='http://www.w3.org/2000/svg' xlink='http://www.w3.org/1999/xlink' height='100%' viewBox='0 0 277.338 277.338' space='preserve')
             use(xlink:href='#icon-pause')

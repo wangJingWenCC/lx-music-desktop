@@ -7,7 +7,7 @@
     <core-player id="player"/>
   </div>
   <material-version-modal v-show="version.showModal"/>
-<!--  <core-icons />-->
+  <core-icons />
 </div>
 
 <!--#container(v-if="isProd && !isNt" :class="theme" @mouseenter="enableIgnoreMouseEvents" @mouseleave="dieableIgnoreMouseEvents")-->
