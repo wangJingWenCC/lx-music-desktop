@@ -1,12 +1,12 @@
 <template>
 <div id="container"  :class="theme" @mouseenter="isProd && !isNt &&enableIgnoreMouseEvents" @mouseleave="isProd && !isNt && dieableIgnoreMouseEvents">
-    <aside id="left"/>
+    <core-aside id="left"/>
   <div id="right">
-    <toolbar id="toolbar"/>
-    <view id="view"/>
-    <player id="player"/>
+    <core-toolbar id="toolbar"/>
+    <core-view id="view"/>
+    <core-player id="player"/>
   </div>
-  <version-modal v-show="version.showModal"/>
+  <material-version-modal v-show="version.showModal"/>
 <!--  <core-icons />-->
 </div>
 
@@ -31,11 +31,6 @@
 </template>
 
 <script>
-import Toolbar from 'components/core/Toolbar'
-import Player from 'components/core/Player'
-import View from 'components/core/View'
-import Aside from 'components/core/Aside'
-import VersionModal from 'components/material/VersionModal'
 import dnscache from 'dnscache'
 import { mapMutations, mapGetters, mapActions } from 'vuex'
 import { rendererOn, rendererSend, rendererInvoke } from '../common/ipc'
@@ -310,13 +305,6 @@ export default {
       document.body.removeEventListener('mouseleave', this.enableIgnoreMouseEvents)
     }
     document.body.removeEventListener('click', this.handleBodyClick)
-  },
-  components: {
-    Toolbar,
-    Player,
-    View,
-    Aside,
-    VersionModal,
   },
 }
 </script>

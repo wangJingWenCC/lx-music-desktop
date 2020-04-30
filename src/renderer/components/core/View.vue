@@ -1,10 +1,10 @@
-<template lang="pug">
-div(:class="$style.view")
-  transition(enter-active-class="animated-fast fadeIn"
-      leave-active-class="animated-fast fadeOut")
-    router-view
-  //- core-title-bar
-  //- router-view
+<template >
+  <div :class="$style.view">
+    <transition enter-active-class="animated-fast fadeIn"
+    leave-active-class="animated-fast fadeOut"></transition>
+    <router-view/>
+  </div>
+
 </template>
 
 
