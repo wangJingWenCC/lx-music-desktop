@@ -59,7 +59,7 @@ function startRenderer() {
             resolve()
           })
         },
-      }
+      },
     )
 
     server.listen(9080)

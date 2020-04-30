@@ -1,20 +1,33 @@
-<template lang="pug">
-#container(v-if="isProd && !isNt" :class="theme" @mouseenter="enableIgnoreMouseEvents" @mouseleave="dieableIgnoreMouseEvents")
-  core-aside#left
-  #right
-    core-toolbar#toolbar
-    core-view#view
-    core-player#player
-  core-icons
-  material-version-modal(v-show="version.showModal")
-#container(v-else :class="theme")
-  core-aside#left
-  #right
-    core-toolbar#toolbar
-    core-view#view
-    core-player#player
-  core-icons
-  material-version-modal(v-show="version.showModal")
+<template>
+<div id="container"  :class="theme" @mouseenter="isProd && !isNt &&enableIgnoreMouseEvents" @mouseleave="isProd && !isNt && dieableIgnoreMouseEvents">
+    <core-aside id="left"/>
+  <div id="right">
+    <core-toolbar id="toolbar"/>
+    <core-view id="view"/>
+    <core-player id="player"/>
+  </div>
+  <material-version-modal v-show="version.showModal"/>
+<!--  <core-icons />-->
+</div>
+
+<!--#container(v-if="isProd && !isNt" :class="theme" @mouseenter="enableIgnoreMouseEvents" @mouseleave="dieableIgnoreMouseEvents")-->
+<!--  core-aside#left-->
+<!--  #right-->
+<!--    core-toolbar#toolbar-->
+<!--    core-view#view-->
+<!--    core-player#player-->
+<!--  //core-icons-->
+<!--  material-version-modal(v-show="version.showModal")-->
+
+
+<!--#container(v-else :class="theme")-->
+<!--  core-aside#left-->
+<!--  #right-->
+<!--    core-toolbar#toolbar-->
+<!--    core-view#view-->
+<!--    core-player#player-->
+<!--  //core-icons-->
+<!--  material-version-modal(v-show="version.showModal")-->
 </template>
 
 <script>
